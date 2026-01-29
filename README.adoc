@@ -7,7 +7,7 @@ AsciiDoc and built with Asciidoctor and GNU Make.
 
 Install GNU Make and Ruby:
 
-[source,console]
+[source,bash]
 ----
 # AlmaLinux OS 9/10 and other EL derivatives
 $ sudo dnf install ruby rubygem-bundler make
