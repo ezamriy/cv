@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Inherit default AsciiDoctor CSS styles */
+@import url(https://cdn.jsdelivr.net/gh/asciidoctor/asciidoctor@2.0/data/stylesheets/asciidoctor-default.css);
+
+body {
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+td {
+  padding: 0.5em 0 0 0 !important;
+}
+
+.contacts {
+  text-align: center;
+}
+
+.header-table {
+  font-size: 1.2em;
+}
+
+.header-date {
+  color: #6e6e6e;
+}

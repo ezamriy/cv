@@ -1,0 +1,13 @@
+extends: default
+
+base:
+  line_height: 1.1
+
+table:
+  font_size: $base_font_size_large
+  cell:
+    padding: [4, 6, 4, 0]
+
+role:
+  header-date:
+    font_color: #6e6e6e

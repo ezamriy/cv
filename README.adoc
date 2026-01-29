@@ -1,0 +1,54 @@
+= Eugene Zamriy's Resume
+
+Source files and build automation for my professional resume, written in
+AsciiDoc and built with Asciidoctor and GNU Make.
+
+== Prerequisites
+
+Install GNU Make and Ruby:
+
+[source,console]
+----
+# AlmaLinux OS 9/10 and other EL derivatives
+$ sudo dnf install ruby rubygem-bundler make
+
+# openSUSE Leap 16.0
+$ sudo zypper install make ruby3.4 ruby3.4-rubygem-bundler
+----
+
+Install Asciidoctor PDF locally using Bundler:
+
+[source,console]
+----
+$ bundle
+Fetching gem metadata from https://rubygems.org/..........
+...
+Fetching asciidoctor-pdf 2.3.24
+Installing asciidoctor-pdf 2.3.24
+Bundle complete! 1 Gemfile dependency, 23 gems now installed.
+Bundled gems are installed into `./.bundle/gems`
+----
+
+== Build
+
+Run `make` to build both PDF and HTML versions:
+
+[source,console]
+----
+$ make
+mkdir -p build
+bundle exec asciidoctor-pdf -a pdf-theme=theme/ezamriy-cv.yml -o build/ezamriy.ru.pdf ezamriy.ru.adoc
+bundle exec asciidoctor -b html5 -o build/ezamriy.ru.html ezamriy.ru.adoc
+----
+
+You can also build individual formats:
+
+* `make html` - builds only the HTML version
+* `make pdf` - builds only the PDF version
+
+== License
+
+* **Build scripts and themes** are licensed under the link:LICENSE[MIT License].
+* **Resume content (personal information, work experience, etc.)** is © Eugene
+  Zamriy, all rights reserved. Unauthorized use, reproduction, or distribution
+  of the resume text is prohibited.
